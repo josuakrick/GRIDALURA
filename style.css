@@ -1,0 +1,47 @@
+.app {
+    background: #f1f1f1;
+    display: grid;  
+    /* Para criar um display grid, é preciso ser feito dentro da tag pai, neste caso, o body que está representado pelo class . app */
+    font-family: Arial, Helvetica, sans-serif;
+    /* grid-template-areas serve para apresentar as areas  do site */
+    grid-template-areas: 
+    "cabecalho"
+    "conteudo"
+    "rodape";
+    grid-template-columns: auto;
+    /* grid-template-rows define o tamanho das linhas, de cada area */
+    grid-template-rows: 50px auto auto;
+
+}
+
+.cabecalho {
+    align-items: center;
+    display: flex;
+    grid-area: cabecalho;
+    padding: 0 2rem;
+}
+
+.menu__link {
+    color: #333333;
+    margin: 5rem 3rem;
+}
+
+.menu__link:hover, .menu__link.ativo {
+    border-bottom: 2px solid #0073e6;
+}
+/* Propriedade grid-area serve para indicar ao css grid a quem a propriedade pertence e onde ela deve ficar na página */
+ 
+.conteudo {
+    padding: 0 2rem;
+    grid-area: conteudo;
+}
+
+.rodape {
+    text-align: center;
+    grid-area: rodape;
+    background: #fdfdfd;
+    color: #333333;
+    font-size: .8rem;
+    padding: 1rem;
+
+}
